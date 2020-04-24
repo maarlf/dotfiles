@@ -55,8 +55,7 @@ autocmd VimEnter * wincmd p
 let NERDTreeShowHidden=1
 
 " Emmet
-let g:user_emmet_leader_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_leader_key=','
 
 " Language specific config
 
