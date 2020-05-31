@@ -4,7 +4,8 @@ set nocompatible
 filetype plugin indent on
 
 syntax on
-colorscheme joker
+colorscheme gruvbox
+set background=dark
 
 set number
 set visualbell
@@ -42,6 +43,10 @@ function! XTermPasteBegin()
 endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+" Custom key
+nnoremap <C-h> :tabprevious<CR>                                                                            
+nnoremap <C-l> :tabnext<CR>
 
 " Plugin key
 map <F3> :CtrlP<CR>
