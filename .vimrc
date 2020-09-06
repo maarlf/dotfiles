@@ -4,8 +4,7 @@ set nocompatible
 filetype plugin indent on
 
 syntax on
-colorscheme gruvbox
-set background=dark
+colorscheme oxeded
 
 set number
 set visualbell
@@ -52,6 +51,9 @@ nnoremap <C-l> :tabnext<CR>
 map <F3> :CtrlP<CR>
 map <F2> :NERDTreeToggle<CR>
 
+" Double <Esc> for clear search highlight
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+
 " Startup plugin
 " autocmd vimenter * NERDTree
 autocmd VimEnter * wincmd p
@@ -84,6 +86,10 @@ let g:php_cs_fixer_enable_default_mapping = 1
 let g:php_cs_fixer_dry_run = 0
 let g:php_cs_fixer_verbose = 0
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
+" Vue higlight error
+let g:vim_vue_plugin_load_full_syntax = 1
+let g:vim_vue_plugin_debug = 1
 
 " Tmux shift + arrow
 if &term =~ '^screen'
